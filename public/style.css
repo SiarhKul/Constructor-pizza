@@ -1,0 +1,306 @@
+/** @format */
+.base-wrapper .base-item:hover, .vegan-wrapper .vegan-item:hover, .meat-wrapper .meat-item:hover, .sauce-wrappper .sauce-item:hover {
+  background-color: #00000041;
+  border-radius: 5px;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+}
+
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.61))), url(./img/section_background.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.61)), url(./img/section_background.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.active {
+  background-color: rgba(0, 0, 0, 0.507);
+  border-radius: 1rem;
+  position: relative;
+  color: white;
+}
+
+.cross {
+  cursor: pointer;
+  z-index: -1;
+}
+
+.cross::before, .cross::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fff;
+  width: 16px;
+  height: 3px;
+  top: 8%;
+  right: 5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.cross::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.cross-calc::before, .cross-calc::after {
+  content: "";
+  background: #000;
+  top: 11px;
+  right: 0;
+}
+
+.list-price {
+  position: relative;
+  color: red;
+  padding: 0.125rem;
+  font-weight: bold;
+}
+
+.section {
+  height: 100vh;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.components-pizza {
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  width: 67%;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.components-pizza h2 {
+  padding: 0.5rem 0;
+  font-style: italic;
+  color: #1b2934;
+}
+
+.viewing-area {
+  margin: 1rem;
+  width: 33%;
+}
+
+.base,
+.components-vegan,
+.components-meat,
+.sauce {
+  text-align: center;
+}
+
+.base span,
+.components-vegan span,
+.components-meat span,
+.sauce span {
+  display: block;
+}
+
+.base-wrapper,
+.vegan-wrapper,
+.meat-wrapper,
+.sauce-wrappper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.base-item .base__wrapper-img {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.vegan-item .vegan__wrapper-img {
+  margin: 0 auto;
+  max-width: 60px;
+}
+
+.sauce-item .sause__wrapper-img {
+  margin: 0 auto;
+  max-width: 80px;
+}
+
+.meat-item .meat__wrapper-img {
+  margin: 0 auto;
+  max-width: 65px;
+}
+
+.base-item,
+.vegan-item,
+.meat-item,
+.sauce-item {
+  margin: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.base-item img,
+.vegan-item img,
+.meat-item img,
+.sauce-item img {
+  max-width: 100%;
+}
+
+.base-item span,
+.vegan-item span,
+.meat-item span,
+.sauce-item span {
+  font-weight: 700;
+}
+
+.order {
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.order .order__img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 200px;
+}
+
+.order .order__img .order__hafl-img {
+  max-height: 100px;
+}
+
+.order .order__img .order__hafl-img img {
+  max-width: 100%;
+  opacity: 0.1;
+  -webkit-transition: opacity 0.5s ease-out;
+  transition: opacity 0.5s ease-out;
+}
+
+.order__button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 0, 0, 0.63);
+  border-radius: 0.5rem;
+  color: #fff;
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+.calculate {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem;
+}
+
+.calculate .calculate__price span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+  .components-pizza {
+    width: 90%;
+  }
+  .order .order__img {
+    width: 150px;
+    height: 150px;
+  }
+  .order .order__img .order__hafl-img {
+    max-height: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .components-pizza {
+    width: 95%;
+  }
+  .base-item .base__wrapper-img {
+    margin: 0 auto;
+    max-width: 85%;
+  }
+  .viewing-area {
+    width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 98%;
+  }
+  .base-wrapper,
+  .vegan-wrapper,
+  .meat-wrapper,
+  .sauce-wrappper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .order .order__img {
+    width: 100px;
+    height: 100px;
+  }
+  .order .order__img .order__hafl-img {
+    max-height: 50px;
+  }
+  .base-item {
+    max-width: 30%;
+  }
+  .base-item img {
+    max-width: 100%;
+  }
+  .order .order__img {
+    width: 80px;
+    height: 80px;
+  }
+  .order .order__img .order__hafl-img {
+    max-height: 40px;
+  }
+  .base-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 90px;
+            flex: 1 1 90px;
+  }
+  .base-item img {
+    max-width: 100%;
+  }
+  .base-item span {
+    font-weight: 700;
+  }
+}
+/*# sourceMappingURL=style.css.map */
